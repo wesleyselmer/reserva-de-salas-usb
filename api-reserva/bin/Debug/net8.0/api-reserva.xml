@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>api-reserva</name>
+    </assembly>
+    <members>
+        <member name="M:api_reserva.Controllers.PeriodoController.Get">
+            <summary>
+            Retorna todas os períodos da base de Dados.
+            </summary>
+        </member>
+        <member name="M:api_reserva.Controllers.PeriodoController.Get(System.String)">
+            <summary>
+            Retorna um período específico, com base no ID.
+            </summary>
+        </member>
+        <member name="M:api_reserva.Controllers.PeriodoController.Post(api_reserva.Models.Periodo)">
+            <summary>
+            Inclui um novo período.
+            </summary>
+        </member>
+        <member name="M:api_reserva.Controllers.PeriodoController.Update(System.String,api_reserva.Models.Periodo)">
+            <summary>
+            Atualiza um período específico, com base no ID.
+            </summary>
+        </member>
+        <member name="M:api_reserva.Controllers.PeriodoController.Delete(System.String)">
+            <summary>
+            Exclui um período específico, com base no ID.
+            </summary>
+        </member>
+        <member name="M:api_reserva.Controllers.ReservaController.Get">
+            <summary>
+            Retorna todas as reservas da base de Dados.
+            </summary>
+        </member>
+        <member name="M:api_reserva.Controllers.ReservaController.Get(System.String)">
+            <summary>
+            Retorna uma reserva específica, com base no ID.
+            </summary>
+        </member>
+        <member name="M:api_reserva.Controllers.ReservaController.Post(api_reserva.Models.Reserva)">
+            <summary>
+            Inclui uma nova reserva.
+            </summary>
+        </member>
+        <member name="M:api_reserva.Controllers.ReservaController.Update(System.String,api_reserva.Models.Reserva)">
+            <summary>
+            Atualiza uma reserva específica, com base no ID.
+            </summary>
+        </member>
+        <member name="M:api_reserva.Controllers.ReservaController.Delete(System.String)">
+            <summary>
+            Exclui uma reserva específica, com base no ID.
+            </summary>
+        </member>
+    </members>
+</doc>

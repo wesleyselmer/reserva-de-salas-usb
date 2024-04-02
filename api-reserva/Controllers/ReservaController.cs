@@ -12,11 +12,16 @@ namespace api_reserva.Controllers
 
         public ReservaController(ReservaService reservaService) =>
             _reservaService = reservaService;
-
+        /// <summary>
+        /// Retorna todas as reservas da base de Dados.
+        /// </summary>
         [HttpGet]
         public async Task<List<Reserva>> Get() =>
             await _reservaService.GetAsync();
-        
+
+        /// <summary>
+        /// Retorna uma reserva específica, com base no ID.
+        /// </summary>
         [HttpGet("{id:length(24)}")]
         public async Task<ActionResult<Reserva>> Get(string id)
         {
@@ -30,6 +35,9 @@ namespace api_reserva.Controllers
             return reserva;
         }
 
+        /// <summary>
+        /// Inclui uma nova reserva.
+        /// </summary>
         [HttpPost]
         public async Task<IActionResult> Post(Reserva newReserva)
         {
@@ -38,6 +46,9 @@ namespace api_reserva.Controllers
             return CreatedAtAction(nameof(Get), new {id = newReserva.Id}, newReserva);
         }
 
+        /// <summary>
+        /// Atualiza uma reserva específica, com base no ID.
+        /// </summary>
         [HttpPut("{id:length(24)}")]
         public async Task<IActionResult> Update(string id, Reserva updatedReserva)
         {
@@ -55,6 +66,9 @@ namespace api_reserva.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Exclui uma reserva específica, com base no ID.
+        /// </summary>
         [HttpDelete("{id:length(24)}")]
         public async Task<IActionResult> Delete(string id)
         {
